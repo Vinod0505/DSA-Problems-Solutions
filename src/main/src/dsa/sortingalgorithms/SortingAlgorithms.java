@@ -80,6 +80,7 @@ public class SortingAlgorithms {
         return arr;
     }
 
+
     public static void printArray(String sortType, int[] arr) {
         System.out.println(sortType + ":");
         for (int num : arr) {
@@ -98,5 +99,7 @@ public class SortingAlgorithms {
         printArray("Bubble Sort", bubbleSorted);
         printArray("Selection Sort", selectionSorted);
         printArray("Insertion Sort", insertionSorted);
+
     }
+
 }
