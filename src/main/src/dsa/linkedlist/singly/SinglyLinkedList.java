@@ -3,6 +3,8 @@ package dsa.linkedlist.singly;
 public class SinglyLinkedList {
 
     public static void main(String[] args) {
+
+        ///   inserting each element at beginning
 //        Node head = null;
 //
 //        int[] arr = {3, 4, 6, 2};
@@ -18,6 +20,8 @@ public class SinglyLinkedList {
 //                head = temp;
 //            }
 //        }
+
+        ///    inserting each element at end
         //read the array and insert each element in the end
 //        for (int i = 0; i < arr.length; i++) {
 //            //if not exists linkedList
@@ -47,27 +51,58 @@ public class SinglyLinkedList {
         * along with the insertion
         *  */
 
-        int[] arr = {3, 4, 6, 2};
+//        int[] arr = {3, 4, 6, 2};
+//
+//        //Create a Node For Head
+//        Node head = null;
+//        //Another node as Tail
+//        Node tail = null;
+//
+//        for (int j : arr) {
+//            //case 1 : if linkedList is null
+//            if (head == null) {
+//                head = new Node(j);
+//                tail = head; // make tail to point to head initially now we know that tail is the last element
+//            }
+//            //case 2 : if linkedList is not null
+//            else {
+//                tail.next = new Node(j); // It creates a link between two nodes
+//                tail = tail.next; // moving the tail to point to next element as that will be the last element
+//            }
+//        }
 
-        //Create a Node For Head
+        /// Inserting an element at specific position or in between to elements
+
+//        Node head = null;
+//        //creating an linkedList using recursion
+//        head = LinkedListUsingRecursion.createLinkedListAtEnd(new int[]{3,2,4,6},0,4);
+
+        //now inserting an element in target place
+//
+//        int target = 2;
+//        int value = 40; //i.e, 3,2,40,4,6
+//
+//        Node temp = head; //insert position
+//        while (target!=1){
+//            temp=temp.next;
+//            target--;
+//        }
+//
+//        Node temp2 =new Node(value);
+//        temp2.next=temp.next;
+//        temp.next=temp2;
+
+        /// Delete node at first
         Node head = null;
-        //Another node as Tail
-        Node tail = null;
+        head = LinkedListUsingRecursion.createLinkedListAtEnd(new int[]{3,2,4,6},0,4);
 
-        for (int j : arr) {
-            //case 1 : if linkedList is null
-            if (head == null) {
-                head = new Node(j);
-                tail = head; // make tail to point to head initially now we know that tail is the last element
-            }
-            //case 2 : if linkedList is not null
-            else {
-                tail.next = new Node(j); // It creates a link between two nodes
-                tail = tail.next; // moving the tail to point to next element as that will be the last element
-            }
+        if(head!=null){
+            Node temp = head;
+            head = head.next;
+            temp.next=null;
         }
 
-
+        //common for all above code to print the element that present in linkedlist
         // print the linkedList
         Node current = head;
         while (current != null) {
